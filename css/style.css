@@ -11,22 +11,26 @@ body {
 }
 
 h1 {
-    font-size: 11rem;
+    font-size: 1.5rem;
     text-align: center;
     line-height: 1;
     color: #484d55;
     margin-block: .25em;
+
+    @media (width > 720px) {
+        font-size: 7.5rem
+    }
 }   
 
 h2, h3 {
     margin-top: 0px;
 }
 
- a:link {
+ /* a:link {
     color:tan;
     text-decoration-style:double;
     text-decoration-color: green;
- }
+ } */
 
 /* a:link{
     text-decoration-style:double;
@@ -65,7 +69,6 @@ section {
     color: #fff;
     border: 5px solid #0b4858;
     padding: 15px;
-    margin-block-end: 1rem;
 }
 
 .teal-text {
@@ -84,6 +87,29 @@ footer p {
     text-align: center;
 }
 
+.navigation ul {
+    display:flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.navigation a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a:focus-visible {
+    color: green;
+}
+
+header {
+    display:flex;
+    justify-content: space-between;
+}
 
 .wrapper {
     max-inline-size: 1000px;
@@ -101,7 +127,6 @@ footer p {
     color: #fff;
     padding: 24px;
     border: 5px solid #0b4858;
-    margin-block-end: 1rem;
     /* background-repeat: no-repeat; */
     background-position: center;
     /* background-size: cover; */
@@ -111,9 +136,15 @@ footer p {
  .gridByTwo {
     display: grid;
     gap: 50px;
-    grid-template-columns: 1fr 1fr;
+    margin-block: 60px;
+    
+    @media (width > 720px) {
+        grid-template-columns: 1fr 1fr;
+    }
  }
+ 
 
+ 
 
 
 
